@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello,moChart</title>
+		<style>
+		#main{
+				border:solid;
+				width:800px;
+				height:400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main"></div>
+
+		<script src="moChart.js"></script>
+		<script type="text/javascript">
+			var painter=moChart.getPainter(document.getElementById("main"),["line","circle"]);
+
+			value1=[-9,-12,-8,-14,17,20,20,19,17,20,14,9,12,8,14,17,20,20,19,17,20,14,20,14,17,20,20,19];
+			value2=[-12,14,-13,5,-40,-11,15,20,4,5,12,3,14,0];
+			value3=[-1,-3,-8,24,35,22,17,6,-2,0,15,23];
+			value4=[-2,-4,-3,-1,9,12,8,13,-4,5,6,7,4,2,-3,-9,-12,0,2,4,6,7];
+			var lineOption={
+				layout:{a:0.1,b:0.45,c:0.2,d:0.05},
+				animate:"flow",
+				xLabel:{
+					start:"20160101",
+					end:"20160101"
+				},
+				items:[
+					{value:value1,color:"red"},
+					{value:value2,color:"blue"},
+					{value:value3,color:"yellow"},
+					{value:value4,color:"black"}
+				],
+			};
+			painter.lineControl.setOption(lineOption);
+
+			var circleOption={
+				layout:{a:0,b:0,c:0,d:0.5},
+				animate:"flow",
+				items:[
+					[{
+						showText:[{value:"786",fontColor:"#000",fontSize:"36"},
+							{value:"abcd",fontColor:"#000",fontSize:"36"}],
+						type:"stroke",
+						color:"#abc",
+						lineWidth:20,
+						r:0.15,
+						startAngle:0,
+						endAngle:360
+					},{
+						type:"fill",
+						color:"#def",
+						r:0.1,
+						startAngle:0,
+						endAngle:360
+					}],[{
+						showText:[{value:"87%"}],
+						type:"stroke",
+						color:"#7bd",
+						lineWidth:20,
+						r:0.15,
+						startAngle:0,
+						endAngle:90
+					},{
+						type:"stroke",
+						lineWidth:20,
+						color:"#fea",
+						r:0.15,
+						startAngle:90,
+						endAngle:180
+					},{
+						lineWidth:20,
+						color:"#fdf",
+						r:0.15,
+						startAngle:180,
+						endAngle:270
+					},{
+						lineWidth:20,
+						color:"#787",
+						r:0.15,
+						startAngle:270,
+						endAngle:360
+					}]
+				]
+			};
+			painter.circleControl.setOption(circleOption);
+			moChart.draw();
+		</script>
+	</body>
+</html>
