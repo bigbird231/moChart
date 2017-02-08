@@ -1,5 +1,5 @@
 # moChart
-- A consice JavaScript library to help you draw chart on webpage.
+- A consice JavaScript library to help you draw chart on webpage.<br />
 ##There are three files in moChart:
 ###moChart.js<br />
 Contains core code of moChart library.If you want to use moChart,just import "moChart.js" to your project. 
