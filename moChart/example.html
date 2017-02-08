@@ -4,15 +4,17 @@
 		<meta charset="UTF-8">
 		<title>Hello,moChart</title>
 		<style>
-		#main{
+		div{
 				border:solid;
 				width:800px;
 				height:400px;
+				margin: 20px;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="main"></div>
+		<div id="bar"></div>
 
 		<script src="moChart.js"></script>
 		<script type="text/javascript">
@@ -88,6 +90,32 @@
 				]
 			};
 			painter.circleControl.setOption(circleOption);
+
+			var barValue=[-1,-3,8,-6,7,-5,2,-4];
+			var xValue=["机械电子","互联网","计算机","电商","机械电子","互联网","计算机","电商"];
+		    var barPainter=moChart.getPainter(document.getElementById("bar"),["bar"]);
+		    var barOption={
+		        layout:{a:0.1,b:0.1,c:0.2,d:0.05},
+		        animate:"flow",
+		        xLabel:{
+		            value:xValue
+		        },
+		        yLabel:{
+		            mark:"%"
+		        },
+		        grid:"dotted",
+		        items:[
+		            {
+		                showValue:{show:true},
+		                //switch type to "bar"
+		                type:"triangle",
+		                colorList:["#fa5d5d","#4a90e2","#35c2db","#f2c068"],
+		                value:barValue
+		            }
+		        ]
+		    };
+		    barPainter.barControl.setOption(barOption);
+
 			moChart.draw();
 		</script>
 	</body>
