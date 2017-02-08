@@ -1,9 +1,9 @@
 # moChart
-###A consice JavaScript library to help you draw chart on webpage.
-There are three files in moChart:
-##moChart.js<br />
+- A consice JavaScript library to help you draw chart on webpage.
+##There are three files in moChart:
+###moChart.js<br />
 Contains core code of moChart library.If you want to use moChart,just import "moChart.js" to your project. 
-##example.html<br />
+###example.html<br />
 This file shows some easy way about how to use moChart library to help you draw chart in webpage.You can edit it and try your code.
-##Document.js<br />
+###Document.js<br />
 This file contains the most explicit description of moChart.If you want to know how many attributes moChart have,read it.
