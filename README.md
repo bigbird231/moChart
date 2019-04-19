@@ -1,5 +1,5 @@
 # mobileChart
-> A consice JavaScript library to help you draw chart on webpage,especially on mobile.
+> A concise JavaScript library to help you draw chart on webpage,especially on mobile.
 
 ## There are three files in moChart:
 ### moChart.js<br />
