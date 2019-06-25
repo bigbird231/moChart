@@ -1,7 +1,7 @@
 # mobileChart
 > A concise JavaScript library to help you draw chart on webpage,especially on mobile.
 
-## There are three files in moChart:
+## There are three files in mobileChart:
 ### moChart.js<br />
 Contains core code of moChart library.If you want to use moChart,just import "moChart.js" to your project. 
 ### example.html<br />
