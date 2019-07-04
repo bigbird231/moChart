@@ -1,4 +1,4 @@
-# mobileChart
+# mobilechart
 > A concise JavaScript library to help you draw chart on webpage,especially on mobile.
 
 ## There are three files in mobileChart:
